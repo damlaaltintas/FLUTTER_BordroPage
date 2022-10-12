@@ -45,18 +45,24 @@ class BordroCard extends StatelessWidget {
                 height: 50.0,
                 width: double.infinity,
                 child: Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    padding: const EdgeInsets.only(left: 10, top: 10, right: 15),
+                    child: Row(
                       children: [
-                        Row(
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(startDate),
-                            const Text(" / "),
-                            Text(endDate)
+                            Row(
+                              children: [
+                                Text(startDate),
+                                const Text(" / "),
+                                Text(endDate)
+                              ],
+                            ),
+                            Text("Ödenecek Tutar: $amount"),
                           ],
                         ),
-                        Text("Ödenecek Tutar: $amount"),
+                        Spacer(),
+                        Icon(Icons.arrow_forward, color: Colors.grey, size: 22,)
                       ],
                     ),
                   ),
