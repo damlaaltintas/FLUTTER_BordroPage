@@ -45,7 +45,7 @@ class BordroCard extends StatelessWidget {
                 height: 50.0,
                 width: double.infinity,
                 child: Padding(
-                    padding: const EdgeInsets.only(left: 10, top: 10, right: 15),
+                    padding: const EdgeInsets.only(left: 10, top: 10, right: 15, bottom: 5),
                     child: Row(
                       children: [
                         Column(
@@ -58,6 +58,7 @@ class BordroCard extends StatelessWidget {
                                 Text(endDate)
                               ],
                             ),
+                            Spacer(),
                             Text("Ödenecek Tutar: $amount"),
                           ],
                         ),
